@@ -173,17 +173,23 @@ import java.util.Scanner;
                 
                 System.out.printf("DIGITE O NOME: ");
                 matriz[i][1] = input.nextLine(); //nome
+
                 System.out.printf("\nDIGITE O CPF: ");
                 matriz[i][2] = input.nextLine(); // cpf
+
                 System.out.printf("\nDIGITE O E-MAIL: ");
                 matriz[i][3] = input.nextLine(); // email
+
                 System.out.printf("\nDIGITE O TELEFONE: ");
                 matriz[i][4] = input.nextLine(); // telefone
+
                 System.out.printf("\nDIGITE O ENDEREÇO: ");
                 matriz[i][5] = input.nextLine(); // endereco
+
                 System.out.printf("DIGITE O VALOR DO SÓCIO-TORCEDOR : [1] %.2f [2] %.2f [3] %.2f\n", categorias_socio[0], categorias_socio[1], categorias_socio[2]);
                 digito = input.nextInt();
                 input.nextLine();
+
                 if(digito==1)
                 {
                     matriz[i][6] = String.valueOf(categorias_socio[0]);// valor de contribuicao
@@ -239,7 +245,7 @@ import java.util.Scanner;
             return;
 
         }
-        System.out.printf("NOVA SITUAÇÃO: ");
+        System.out.printf("NOVA SITUAÇÃO,'A' OU 'N': ");
         matriz[indice_do_nome][8] = input.nextLine();
 
         System.out.println("SITUAÇÃO ATUALIZADA:");
@@ -355,7 +361,7 @@ import java.util.Scanner;
         int flag = -1,flag2=-1;
        for(int i=0;i<matriz_time.length;i++)
        {
-           if(matriz_time[i][0].equals("4"))
+           if(matriz_time[i][0].equals("4") && opcao!=2)
            {
                System.out.printf("TÉCNICO = %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
                flag=1;
@@ -375,13 +381,13 @@ import java.util.Scanner;
                {
                    if(matriz_time[i][9].equals("A"))
                    {
-                        System.out.printf("JOGADOR = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][8],matriz_time[i][9]);
+                        System.out.printf("JOGADOR = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s //POSIÇÃO: %s //APTO: %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][8],matriz_time[i][9]);
 
                    }
                }
                else
                {
-                 System.out.printf("JOGADOR = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][8],matriz_time[i][9]);
+                 System.out.printf("JOGADOR = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s //POSIÇÃO: %s //APTO OU NÃO: %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][8],matriz_time[i][9]);
 
                }
 
@@ -404,7 +410,7 @@ import java.util.Scanner;
                 {
                     if(matriz_time[i][0].equals("1") && flag==-1)
                     {
-                        System.out.printf("PRESIDENTE = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
+                        System.out.printf("PRESIDENTE = NOME: %s // CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
                         flag = 1;
                     }
                    
@@ -413,7 +419,7 @@ import java.util.Scanner;
                 {
                     if(matriz_time[i][0].equals("2"))
                     {
-                        System.out.printf("MÉDICO = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][6]);
+                        System.out.printf("MÉDICO = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s //CRM: %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][6]);
 
                     }
                 }
@@ -421,7 +427,7 @@ import java.util.Scanner;
                 {
                     if(matriz_time[i][0].equals("3"))
                     {
-                        System.out.printf("ADVOGADO = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
+                        System.out.printf("ADVOGADO = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
                         
                     }
                 }
@@ -429,7 +435,7 @@ import java.util.Scanner;
                 {
                     if(matriz_time[i][0].equals("5"))
                     {
-                        System.out.printf("PREPARADOR FÍSICO = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
+                        System.out.printf("PREPARADOR FÍSICO = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
 
                     }
                 }
@@ -437,16 +443,16 @@ import java.util.Scanner;
                 {
                     if(matriz_time[i][0].equals("6"))
                     {
-                        System.out.printf("MOTORISTA = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][7]);
+                        System.out.printf("MOTORISTA = NOME: %s //CPF: %s //EMAIL %s //TELEFONE: %s //SALÁRIO: R$ %s //NÚMERO DA HABILITAÇÃO: %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5],matriz_time[i][7]);
 
 
                     }
                 }
                 else if(j==7)
                 {
-                    if(matriz_time[i][0].equals("2"))
+                    if(matriz_time[i][0].equals("7"))
                     {
-                        System.out.printf("COZINHEIRO = %s // %s // %s // %s // %s // %s // %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
+                        System.out.printf("COZINHEIRO = NOME: %s //CPF: %s //EMAIL: %s //TELEFONE: %s //SALÁRIO: R$ %s\n", matriz_time[i][1], matriz_time[i][2],matriz_time[i][3],matriz_time[i][4],matriz_time[i][5]);
                     }
                 }
             }
@@ -454,11 +460,11 @@ import java.util.Scanner;
     }
     static void relatorio_recursos(String[][] estadio_dados, String[][] ct_DADOS, int onibus)
     {
-        System.out.printf("NOME DO CT: %s\nQUANTIDADE DE DORMITÓRIOS: %s\n", ct_DADOS[0][0],ct_DADOS[0][1]);
+        System.out.printf("NOME DO CT: %s\nQUANTIDADE DE DORMITÓRIOS: %s\n\n", ct_DADOS[0][0],ct_DADOS[0][1]);
 
-        System.out.printf("NOME DO ESTÁDIO: %s\nCAPACIDADE: %s\nNÚMERO DE BANHEIROS: %s\nNÚMERO DE LANCHONETES: %s\n", estadio_dados[0][0],estadio_dados[0][1],estadio_dados[0][2],estadio_dados[0][3]);
+        System.out.printf("NOME DO ESTÁDIO: %s\nCAPACIDADE: %s\nNÚMERO DE BANHEIROS: %s\nNÚMERO DE LANCHONETES: %s\n\n", estadio_dados[0][0],estadio_dados[0][1],estadio_dados[0][2],estadio_dados[0][3]);
 
-        System.out.printf("QUANTIDADE DE ÔNIBUS DISPONÍVEIS : %d\n", onibus);
+        System.out.printf("QUANTIDADE DE ÔNIBUS DISPONÍVEIS : %d\n\n", onibus);
 
     }
     static void relatorio_socio(String[][] matriz_socio, int opcao)
@@ -470,30 +476,41 @@ import java.util.Scanner;
             {
                 cont++;
             }
-            if(opcao==2)
+            if("-1".equals(matriz_socio[i][1]))
             {
-                if(matriz_socio[i][8].equals("A"))
-                {
-                    System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s\n", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
-                }
-            }
-            else if(opcao==3)
-            {
-                if(matriz_socio[i][8].equals("I"))
-                {
-                    System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s\n", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
-                }
-            }
-            else if(opcao==4)
-            {
-                System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
-
+                break;
             }
 
+                if(opcao==2)
+                {
+                    if(matriz_socio[i][8].equals("A"))
+                    {
+                        System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s\n", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
+                    }
+                }
+                else if(opcao==3)
+                {
+                    if(matriz_socio[i][8].equals("N"))
+                    {
+                        System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s\n", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
+                    }
+                }
+                else if(opcao==4)
+                {
+                    System.out.printf("NOME = %s // CPF = %s // E-MAIL = %s // TELEFONE = %s // ENDEREÇO = %s // VALOR DE CONTRIBUIÇÃO = %s // TIPO DO SÓCIO = %s // SITUAÇÃO = %s", matriz_socio[i][1],matriz_socio[i][2],matriz_socio[i][3],matriz_socio[i][4],matriz_socio[i][5],matriz_socio[i][6],matriz_socio[i][7],matriz_socio[i][8]);
+
+                }
+            
+
+            
         }
         if(opcao==1)
         {
             System.out.printf("QUANTIDADE = %d\n", cont);
+        }
+        else if(cont==0)
+        {
+            System.out.printf("NÃO HÁ SÓCIOS CADASTRADOS!\n");
         }
     }
     public static void main(String[] args) 
@@ -534,7 +551,7 @@ import java.util.Scanner;
                 break;
             }
 
-            System.out.printf("Senha incorreta\nDigite novamente\n" );
+            System.out.printf("Senha incorreta\nDigite novamente\n");
             clearsoccer();
         }
 
@@ -542,14 +559,14 @@ import java.util.Scanner;
         {
 
         
-            System.out.printf("ESCOLHA UMA DESSAS OPÇÕES:\n\n");
-            System.out.printf("[1] ADICIONAR FUNCIONÁRIO\n[2]ADICIONAR SÓCIO-TORCEDOR\n[3]GERENCIAR RECURSOS\n[4]RELATÓRIOS\n[5]SAIR DO PROGRAMA\nDIGITE: ");
+            System.out.printf("\nESCOLHA UMA DESSAS OPÇÕES:\n\n");
+            System.out.printf("[1]ADICIONAR FUNCIONÁRIO\n[2]ADICIONAR SÓCIO-TORCEDOR\n[3]GERENCIAR RECURSOS\n[4]RELATÓRIOS\n[5]SAIR DO PROGRAMA\nDIGITE: ");
             int number = input.nextInt();
             if(number==1) // adicionar funcionarios
             {
                 
-                System.out.printf("ESCOLHA UMA DESSAS OPÇÕES:\n\n");
-                System.out.println("[1] PRESIDENTE\n[2]MÉDICO\n[3]ADVOGADO\n[4]TÉCNICO\n[5]PREPARADOR FÍSICO\n[6]MOTORISTA\n[7]COZINHEIRO\n[8]JOGADOR\n[9]VOLTAR\nDIGITE: ");
+                System.out.printf("\nESCOLHA UMA DESSAS OPÇÕES:\n\n");
+                System.out.println("[1]PRESIDENTE\n[2]MÉDICO\n[3]ADVOGADO\n[4]TÉCNICO\n[5]PREPARADOR FÍSICO\n[6]MOTORISTA\n[7]COZINHEIRO\n[8]JOGADOR\n[9]VOLTAR\nDIGITE: ");
                 int number_adicionar = input.nextInt();
                 input.nextLine();
                 if(number_adicionar==1 || number_adicionar==3 || number_adicionar==4 || number_adicionar==5 || number_adicionar==7 )
@@ -569,7 +586,7 @@ import java.util.Scanner;
             }
             else if(number==2)
             {
-                System.out.printf("ESCOLHA UMA DESSAS OPÇÕES:\n\n");
+                System.out.printf("\nESCOLHA UMA DESSAS OPÇÕES:\n\n");
                 System.out.printf("[1]ADICIONAR SÓCIO-TORCEDOR\n[2]EDITAR SÓCIO-TORCEDOR\n");
                 int number_socio = input.nextInt();
                 input.nextLine();
@@ -597,13 +614,13 @@ import java.util.Scanner;
             }
             else if(number==3)
             {
-                System.out.printf("DIGITE A OPÇÃO DESEJADA: \n[1]ÔNIBUS\n[2]ESTÁDIO\n[3]CENTRO DE TREINAMENTO\n[4]VOLTAR\n");
+                System.out.printf("DIGITE A OPÇÃO DESEJADA:\n[1]ÔNIBUS\n[2]ESTÁDIO\n[3]CENTRO DE TREINAMENTO\n[4]VOLTAR\n");
                 int escolha_gerenciamento = input.nextInt();
                 input.nextLine();
                 if(escolha_gerenciamento==1)
                 {
                      
-                    System.out.printf("DIGITE A OPÇÃO DESEJADA: \n[1]ADICIONAR\n[2]VERIFICAR DISPONIBILIDADE\n");
+                    System.out.printf("DIGITE A OPÇÃO DESEJADA:\n[1]ADICIONAR\n[2]VERIFICAR DISPONIBILIDADE\n");
                     int escolha_onibus = input.nextInt();
                     input.nextLine();
                     if(escolha_onibus==1)
@@ -626,7 +643,7 @@ import java.util.Scanner;
                 }
                 else if(escolha_gerenciamento==2)
                 {
-                    System.out.printf("DIGITE A OPÇÃO DESEJADA:\n [1]ADICIONAR ESTÁDIO\n[2]VERIFICAR DISPONIBILIDADE\n[3]EDITAR DADOS DO ESTÁDIO\n[4]VOLTAR\n");
+                    System.out.printf("DIGITE A OPÇÃO DESEJADA:\n[1]ADICIONAR ESTÁDIO\n[2]VERIFICAR DISPONIBILIDADE\n[3]EDITAR DADOS DO ESTÁDIO\n[4]VOLTAR\n");
                     int escolha_estadio = input.nextInt();
                     input.nextLine();
                     if(escolha_estadio==1)
@@ -655,7 +672,7 @@ import java.util.Scanner;
                 }
                 else if(escolha_gerenciamento==3)
                 {
-                    System.out.printf("DIGITE A OPÇÃO DESEJADA:\n [1]ADICIONAR CENTRO DE TREINAMENTO\n[2]VERIFICAR DISPONIBILIDADE\n[3]EDITAR DADOS DO CT\n[4]VOLTAR\n");
+                    System.out.printf("DIGITE A OPÇÃO DESEJADA:\n[1]ADICIONAR CENTRO DE TREINAMENTO\n[2]VERIFICAR DISPONIBILIDADE\n[3]EDITAR DADOS DO CT\n[4]VOLTAR\n");
                     int escolha_CT = input.nextInt();
                     input.nextLine();
                     if(escolha_CT==1)
@@ -722,6 +739,5 @@ import java.util.Scanner;
        
 
     }
-    
-    
+       
 }
